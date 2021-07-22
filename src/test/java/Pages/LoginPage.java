@@ -1,18 +1,3 @@
-/*
- * Copyright 2014-2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License").
- * You may not use this file except in compliance with the License.
- * A copy of the License is located at
- *
- * http://aws.amazon.com/apache2.0
- *
- * or in the "license" file accompanying this file. This file is distributed
- * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- * express or implied. See the License for the specific language governing
- * permissions and limitations under the License.
- */
-
 package Pages;
 
 import io.appium.java_client.AppiumDriver;
@@ -29,50 +14,32 @@ public class LoginPage extends BasePage {
      * The login button
      */
     @AndroidFindBy(id = "continueButton")
-    private MobileElement loginButton;
+    private MobileElement continueButton;
 
     /**
      * The user name input
      */
-    @AndroidFindBy(id = "com.amazonaws.devicefarm.android.referenceapp:id/username_text_input")
-    private MobileElement usernameField;
-
-    /**
-     * The password input
-     */
-    @AndroidFindBy(id = "com.amazonaws.devicefarm.android.referenceapp:id/password_text_input")
-    private MobileElement passwordField;
+    @AndroidFindBy(id = "enableFastForwardToDashboard")
+    private MobileElement fastForwardButton;
 
     public LoginPage(AppiumDriver driver) {
         super(driver);
     }
 
-    /**
-     * Tries to login with a set of credentials
-     *
-     * @param username the username
-     * @param password the password
-     *
-     * @return true if username was entered in correctly, else false.
-     */
     public boolean login(String username, String password) throws InterruptedException {
-        //boolean usernameStatus = sendKeysToElement(username, usernameField, false);
-
-        //passwordField.click();
-        //Thread.sleep(KEYBOARD_ANIMATION_DELAY);
-        //passwordField.sendKeys(password);
-
-        loginButton.click();
+        fastForwardButton.click();
+        continueButton.click();
+        Thread.sleep(KEYBOARD_ANIMATION_DELAY);
 
         return true;
     }
 
     /**
      *
-     * @return the login message
+     * @return the dashboard identity strength message
      */
     public String getMessage() {
-        return driver.findElementById("Alt Message").getText();
+        return driver.findElementById("identityStrengthTitle").getText();
     }
 
     /**
@@ -81,13 +48,13 @@ public class LoginPage extends BasePage {
      * @return is back at login
      */
     public boolean checkIfBackAtLogin() {
-        return loginButton.isDisplayed() && usernameField.isDisplayed() && passwordField.isDisplayed();
+        return continueButton.isDisplayed() && fastForwardButton.isDisplayed();
     }
 
     /**
      * Presses the logout/try again button
      */
     public void pressAltButton() {
-        driver.findElementById("Alt Button").click();
+        //driver.findElementById("Alt Button").click();
     }
 }

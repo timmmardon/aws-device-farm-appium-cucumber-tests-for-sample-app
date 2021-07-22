@@ -123,6 +123,6 @@ public abstract class TestBase extends AbstractTestNGCucumberTests {
      */
     @AfterClass
     public void restartApp() {
-        driver.resetApp();
+        //driver.resetApp();
     }
 }
