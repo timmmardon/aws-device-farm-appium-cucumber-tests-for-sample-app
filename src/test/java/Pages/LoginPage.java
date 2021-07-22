@@ -28,7 +28,7 @@ public class LoginPage extends BasePage {
     /**
      * The login button
      */
-    @AndroidFindBy(id = "com.amazonaws.devicefarm.android.referenceapp:id/login_button")
+    @AndroidFindBy(id = "continueButton")
     private MobileElement loginButton;
 
     /**
@@ -56,15 +56,15 @@ public class LoginPage extends BasePage {
      * @return true if username was entered in correctly, else false.
      */
     public boolean login(String username, String password) throws InterruptedException {
-        boolean usernameStatus = sendKeysToElement(username, usernameField, false);
+        //boolean usernameStatus = sendKeysToElement(username, usernameField, false);
 
-        passwordField.click();
-        Thread.sleep(KEYBOARD_ANIMATION_DELAY);
-        passwordField.sendKeys(password);
+        //passwordField.click();
+        //Thread.sleep(KEYBOARD_ANIMATION_DELAY);
+        //passwordField.sendKeys(password);
 
         loginButton.click();
 
-        return usernameStatus;
+        return true;
     }
 
     /**

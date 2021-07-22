@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="Tests.LoginTest">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="setUpAppium"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="restartApp"/>
+          <include name="tearDownAppium"/>
+          <include name="navigateTo"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- Tests.LoginTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

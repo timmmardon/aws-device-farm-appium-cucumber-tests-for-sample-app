@@ -67,9 +67,9 @@ public class NavigationPage extends BasePage{
                 if (titleText.equalsIgnoreCase(categoryName)) categoryElement = categoryTitleElement;
 
             }
-            if (categoryElement == null) {
-                driver.scrollTo(categoryName);
-            }
+            // if (categoryElement == null) {
+            //     driver.scrollTo(categoryName);
+            // }
         }
 
         categoryElement.click();

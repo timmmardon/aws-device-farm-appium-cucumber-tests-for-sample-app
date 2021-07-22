@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="1" name="TestSuite" time="7.63" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.241-b07"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/timmardon/Documents/GitHub/mygovid/aws-device-farm-appium-cucumber-tests-for-sample-app"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="AU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/timmardon/Documents/GitHub/mygovid/aws-device-farm-appium-cucumber-tests-for-sample-app"/>
+    <property name="java.runtime.version" value="1.8.0_241-b07"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/1n/ssqh1f3n3vd3xc02zfx8r0zm0000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/opt/apache-maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/timmardon/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/opt/apache-maven/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.16"/>
+    <property name="library.jansi.path" value="/opt/apache-maven/lib/jansi-native"/>
+    <property name="http.nonProxyHosts" value="local, 169.254/16|*.local, 169.254/16"/>
+    <property name="user.home" value="/Users/timmardon"/>
+    <property name="user.timezone" value="Australia/Brisbane"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="timmardon"/>
+    <property name="java.class.path" value="/opt/apache-maven/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_241"/>
+    <property name="java.ext.dirs" value="/Users/timmardon/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/opt/apache-maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local, 169.254/16|*.local, 169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local, 169.254/16|*.local, 169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="Tests.LoginTest" name="feature" time="7.63">
+    <failure message="org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;Tims-MacBook-Pro.local&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=au.gov.ato.mygovid.droid.integration, statBarHeight=84, noReset=false, viewportRect={top=84, left=0, width=1440, height=2628}, deviceName=emulator-5554, fullReset=false, platform=LINUX, deviceUDID=emulator-5554, desired={appPackage=au.gov.ato.mygovid.droid.integration, appActivity=au.gov.ato.myGovID.LaunchActivity, noReset=false, platformVersion=11.0, automationName=UIAutomator2, platformName=Android, deviceName=emulator-5554, fullReset=false}, platformVersion=11, webStorageEnabled=false, automationName=UIAutomator2, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceApiLevel=30, deviceManufacturer=Google, deviceScreenSize=1440x2880, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=au.gov.ato.myGovID.LaunchActivity, pixelRatio=3.5, locationContextEnabled=false, deviceScreenDensity=560, deviceModel=sdk_gphone_x86_arm}]
+Session ID: c73d3433-f57c-48a1-971e-0c3ac10cd823
+*** Element info: {Using=id, value=Alt Message}" type="cucumber.runtime.CucumberException">cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;Tims-MacBook-Pro.local&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=au.gov.ato.mygovid.droid.integration, statBarHeight=84, noReset=false, viewportRect={top=84, left=0, width=1440, height=2628}, deviceName=emulator-5554, fullReset=false, platform=LINUX, deviceUDID=emulator-5554, desired={appPackage=au.gov.ato.mygovid.droid.integration, appActivity=au.gov.ato.myGovID.LaunchActivity, noReset=false, platformVersion=11.0, automationName=UIAutomator2, platformName=Android, deviceName=emulator-5554, fullReset=false}, platformVersion=11, webStorageEnabled=false, automationName=UIAutomator2, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceApiLevel=30, deviceManufacturer=Google, deviceScreenSize=1440x2880, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=au.gov.ato.myGovID.LaunchActivity, pixelRatio=3.5, locationContextEnabled=false, deviceScreenDensity=560, deviceModel=sdk_gphone_x86_arm}]
+Session ID: c73d3433-f57c-48a1-971e-0c3ac10cd823
+*** Element info: {Using=id, value=Alt Message}
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;Tims-MacBook-Pro.local&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=au.gov.ato.mygovid.droid.integration, statBarHeight=84, noReset=false, viewportRect={top=84, left=0, width=1440, height=2628}, deviceName=emulator-5554, fullReset=false, platform=LINUX, deviceUDID=emulator-5554, desired={appPackage=au.gov.ato.mygovid.droid.integration, appActivity=au.gov.ato.myGovID.LaunchActivity, noReset=false, platformVersion=11.0, automationName=UIAutomator2, platformName=Android, deviceName=emulator-5554, fullReset=false}, platformVersion=11, webStorageEnabled=false, automationName=UIAutomator2, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceApiLevel=30, deviceManufacturer=Google, deviceScreenSize=1440x2880, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=au.gov.ato.myGovID.LaunchActivity, pixelRatio=3.5, locationContextEnabled=false, deviceScreenDensity=560, deviceModel=sdk_gphone_x86_arm}]
+Session ID: c73d3433-f57c-48a1-971e-0c3ac10cd823
+*** Element info: {Using=id, value=Alt Message}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at Pages.LoginPage.getMessage(LoginPage.java:75)
+	at Tests.LoginTest.loginFail(LoginTest.java:81)
+	at ✽.Given username is bad(LoginTest/LoginTest.feature:8)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;Tims-MacBook-Pro.local&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=au.gov.ato.mygovid.droid.integration, statBarHeight=84, noReset=false, viewportRect={top=84, left=0, width=1440, height=2628}, deviceName=emulator-5554, fullReset=false, platform=LINUX, deviceUDID=emulator-5554, desired={appPackage=au.gov.ato.mygovid.droid.integration, appActivity=au.gov.ato.myGovID.LaunchActivity, noReset=false, platformVersion=11.0, automationName=UIAutomator2, platformName=Android, deviceName=emulator-5554, fullReset=false}, platformVersion=11, webStorageEnabled=false, automationName=UIAutomator2, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceApiLevel=30, deviceManufacturer=Google, deviceScreenSize=1440x2880, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=au.gov.ato.myGovID.LaunchActivity, pixelRatio=3.5, locationContextEnabled=false, deviceScreenDensity=560, deviceModel=sdk_gphone_x86_arm}]
+Session ID: c73d3433-f57c-48a1-971e-0c3ac10cd823
+*** Element info: {Using=id, value=Alt Message}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at Pages.LoginPage.getMessage(LoginPage.java:75)
+	at Tests.LoginTest.loginFail(LoginTest.java:81)
+	at ✽.Given username is bad(LoginTest/LoginTest.feature:8)
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@2f410acf
+Feature: Does the login page work?
+    We want the login page to work when the login credentials are valid, and fail otherwise
+
+  Background: A Login Page             # LoginTest/LoginTest.feature:4
+    Given I navigate to the login page # LoginTest.setUpPage()
+
+  Scenario: Login fails   # LoginTest/LoginTest.feature:7
+    Given username is bad # LoginTest.loginFail()
+      org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 6.02 seconds
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+      System info: host: &apos;Tims-MacBook-Pro.local&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_241&apos;
+      Driver info: io.appium.java_client.android.AndroidDriver
+      Capabilities [{appPackage=au.gov.ato.mygovid.droid.integration, statBarHeight=84, noReset=false, viewportRect={top=84, left=0, width=1440, height=2628}, deviceName=emulator-5554, fullReset=false, platform=LINUX, deviceUDID=emulator-5554, desired={appPackage=au.gov.ato.mygovid.droid.integration, appActivity=au.gov.ato.myGovID.LaunchActivity, noReset=false, platformVersion=11.0, automationName=UIAutomator2, platformName=Android, deviceName=emulator-5554, fullReset=false}, platformVersion=11, webStorageEnabled=false, automationName=UIAutomator2, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceApiLevel=30, deviceManufacturer=Google, deviceScreenSize=1440x2880, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=au.gov.ato.myGovID.LaunchActivity, pixelRatio=3.5, locationContextEnabled=false, deviceScreenDensity=560, deviceModel=sdk_gphone_x86_arm}]
+      Session ID: c73d3433-f57c-48a1-971e-0c3ac10cd823
+      *** Element info: {Using=id, value=Alt Message}
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+      	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+      	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+      	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+      	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+      	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+      	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+      	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+      	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+      	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+      	at Pages.LoginPage.getMessage(LoginPage.java:75)
+      	at Tests.LoginTest.loginFail(LoginTest.java:81)
+      	at ✽.Given username is bad(LoginTest/LoginTest.feature:8)
+
+    Then log out          # LoginTest.logOut()
+
+  Background: A Login Page             # LoginTest/LoginTest.feature:4
+    Given I navigate to the login page # LoginTest.setUpPage()
+
+  Scenario: Login succeeds    # LoginTest/LoginTest.feature:12
+    Given username is correct # LoginTest.loginSuccess()
+      org.openqa.selenium.StaleElementReferenceException: Cached elements &apos;By.id: continueButton&apos; do not exist in DOM anymore (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 477 milliseconds
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+      Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+      System info: host: &apos;Tims-MacBook-Pro.local&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_241&apos;
+      Driver info: io.appium.java_client.android.AndroidDriver
+      Capabilities [{appPackage=au.gov.ato.mygovid.droid.integration, statBarHeight=84, noReset=false, viewportRect={top=84, left=0, width=1440, height=2628}, deviceName=emulator-5554, fullReset=false, platform=LINUX, deviceUDID=emulator-5554, desired={appPackage=au.gov.ato.mygovid.droid.integration, appActivity=au.gov.ato.myGovID.LaunchActivity, noReset=false, platformVersion=11.0, automationName=UIAutomator2, platformName=Android, deviceName=emulator-5554, fullReset=false}, platformVersion=11, webStorageEnabled=false, automationName=UIAutomator2, takesScreenshot=true, javascriptEnabled=true, platformName=Android, deviceApiLevel=30, deviceManufacturer=Google, deviceScreenSize=1440x2880, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=au.gov.ato.myGovID.LaunchActivity, pixelRatio=3.5, locationContextEnabled=false, deviceScreenDensity=560, deviceModel=sdk_gphone_x86_arm}]
+      Session ID: c73d3433-f57c-48a1-971e-0c3ac10cd823
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+      	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+      	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+      	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+      	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+      	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:33)
+      	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+      	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+      	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:39)
+      	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:58)
+      	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.click(&lt;generated&gt;)
+      	at Pages.LoginPage.login(LoginPage.java:65)
+      	at Tests.LoginTest.loginSuccess(LoginTest.java:71)
+      	at ✽.Given username is correct(LoginTest/LoginTest.feature:13)
+
+    Then log out              # LoginTest.logOut()
+</system-out>
+  </testcase>
+</testsuite>

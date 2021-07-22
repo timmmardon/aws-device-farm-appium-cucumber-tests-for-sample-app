@@ -83,10 +83,13 @@ public abstract class TestBase extends AbstractTestNGCucumberTests {
 
         //Set the DesiredCapabilities capabilities only for local development
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "Android Emulator");
-        capabilities.setCapability("appPackage", "com.amazonaws.devicefarm.android.referenceapp");
-        capabilities.setCapability("appActivity", "com.amazonaws.devicefarm.android.referenceapp.Activities.MainActivity");
-        capabilities.setCapability("udid", "emulator-5554");
+        capabilities.setCapability("platformVersion", "11.0");
+        capabilities.setCapability("deviceName", "emulator-5554");
+        capabilities.setCapability("appPackage", "au.gov.ato.mygovid.droid.integration");
+        capabilities.setCapability("appActivity", "au.gov.ato.myGovID.LaunchActivity");
+        capabilities.setCapability("automationName", "UIAutomator2");
+        capabilities.setCapability("noReset", "false");
+        capabilities.setCapability("fullReset", "false");
 
         driver = new AndroidDriver<MobileElement>(url, capabilities);
 
@@ -110,8 +113,8 @@ public abstract class TestBase extends AbstractTestNGCucumberTests {
      */
     @BeforeClass
     public void navigateTo() throws InterruptedException {
-        navigationPage = new NavigationPage(driver);
-        navigationPage.gotoCategory(getName());
+        // navigationPage = new NavigationPage(driver);
+        // navigationPage.gotoCategory(getName());
     }
 
     /**
