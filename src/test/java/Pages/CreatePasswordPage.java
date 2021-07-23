@@ -10,10 +10,10 @@ public class CreatePasswordPage extends BasePage {
         super(driver);
     }
 
-    @AndroidFindBy(xpath = "//*[contains(text(),'Password')]")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Password']")
     private MobileElement Password;
 
-    @AndroidFindBy(xpath = "//*[contains(text(),'Confirm password')]")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Confirm password']")
     private MobileElement ConfirmPassword;
 
     @AndroidFindBy(id = "nextButton")

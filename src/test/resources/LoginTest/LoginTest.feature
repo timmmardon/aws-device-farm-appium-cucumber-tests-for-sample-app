@@ -19,7 +19,7 @@ Feature: This test verifies user registration
         When I select Next
         Then I should see Create a password screen
         When I enter Password as Password!1
-        When I enter Confirm password as "Password!1"
+        When I enter Confirm password as Password!1
         # And I select "Next"
         # Then I should see "Personal details" screen
         # When I fill personal details with "Tim", "Mardon", "01/01/1990"
