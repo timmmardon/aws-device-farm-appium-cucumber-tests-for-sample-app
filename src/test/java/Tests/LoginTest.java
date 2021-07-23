@@ -12,6 +12,9 @@ import Pages.TermsOfUsePage;
 import Pages.EmailPage;
 import Pages.VerifyEmailPage;
 import Pages.CreatePasswordPage;
+import Pages.PersonalDetailsPage;
+import Pages.DashboardPage;
+
 import Tests.AbstractBaseTests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -37,6 +40,8 @@ public class LoginTest extends TestBase {
     private EmailPage emailPage;
     private VerifyEmailPage verifyEmailPage;
     private CreatePasswordPage createPasswordPage;
+    private PersonalDetailsPage personalDetailsPage;
+    private DashboardPage dashboardPage;
 
     @Override
     public String getName() {
@@ -130,9 +135,9 @@ public class LoginTest extends TestBase {
         Thread.sleep(1000);
     }
 
-    @When("I select Next")
-    public void selectNextButton() throws InterruptedException {
-        verifyEmailPage.SelectNextButton();
+    @When("I select Next on verify email")
+    public void selectNextButtonVerfyEmail() throws InterruptedException {
+        verifyEmailPage.SelectVerifyEmailNextButton();
         Thread.sleep(1000);
     }
 
@@ -151,5 +156,34 @@ public class LoginTest extends TestBase {
     public void enterConfirmPassword() throws InterruptedException {
         createPasswordPage.EnterConfirmPassword();
         Thread.sleep(2000);
+    }
+
+    @When("I press Next")
+    public void selectPasswordNextButton() {
+        createPasswordPage.SelectPasswordNextButton();
+    }
+
+    @Then("I should see Personal details screen")
+    public void verifyPersonalDetailsPage() {
+        personalDetailsPage = new PersonalDetailsPage(driver);
+        Assert.assertEquals("Personal details", personalDetailsPage.getMessage());
+    }
+
+    @When("I fill personal details with Tim, Mardon, 01/01/1990")
+    public void enterPersonalDetails() {
+        personalDetailsPage.EnterGivenName();
+        personalDetailsPage.EnterFamilyName();
+        personalDetailsPage.EnterDOB();
+    }
+
+    @When("I select Done")
+    public void selectDone() {
+        personalDetailsPage.SelectDoneButton();
+    }
+
+    @Then("I should see dashboard with identity strength as Standard")
+    public void verifyDashboard() {
+        dashboardPage = new DashboardPage(driver);
+        Assert.assertEquals("John, your identity strength is Standard", dashboardPage.getMessage());
     }
 }

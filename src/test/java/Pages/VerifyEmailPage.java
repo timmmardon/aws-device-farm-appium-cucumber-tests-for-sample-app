@@ -25,7 +25,7 @@ public class VerifyEmailPage extends BasePage {
         verificationCodeInput.sendKeys("111111");
     }
 
-    public void SelectNextButton() {
+    public void SelectVerifyEmailNextButton() {
         verifyEmailNextButton.click();
     }
 }

@@ -23,7 +23,7 @@ public class CreatePasswordPage extends BasePage {
         return driver.findElementById("capturePasswordHeadingLabel").getText();
     }
 
-    public void SelectNextButton() {
+    public void SelectPasswordNextButton() {
         passwordNextbutton.click();
     }
 

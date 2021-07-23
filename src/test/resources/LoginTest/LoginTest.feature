@@ -16,12 +16,12 @@ Feature: This test verifies user registration
         When I select Get code
         Then I should see Verify your email screen
         When I enter verification code as 111111
-        When I select Next
+        When I select Next on verify email
         Then I should see Create a password screen
         When I enter Password as Password!1
         When I enter Confirm password as Password!1
-        # And I select "Next"
-        # Then I should see "Personal details" screen
-        # When I fill personal details with "Tim", "Mardon", "01/01/1990"
-        # And I select "Done"
-        # Then I should see dashboard with identity strength as "Standard"
+        When I press Next
+        Then I should see Personal details screen
+        When I fill personal details with Tim, Mardon, 01/01/1990
+        When I select Done
+        Then I should see dashboard with identity strength as Standard
