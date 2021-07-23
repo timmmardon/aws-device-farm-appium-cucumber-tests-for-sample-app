@@ -20,8 +20,15 @@ public class OnboardingPage extends BasePage {
     //     onboardingSlider.click();
     // }
 
+    @AndroidFindBy(id = "nextButton")
+    private MobileElement startNowButton;
+
     public String getMessage() {
         return driver.findElementById("helpOverlayContentTitle").getText();
+    }
+
+    public void SelectStartNowButton() {
+        startNowButton.click();
     }
 
     // public static void ScrollFromRightToLeft()

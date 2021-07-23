@@ -8,6 +8,10 @@ import cucumber.api.java.en.When;
 import Pages.LoginPage;
 import Pages.CreateAccountPage;
 import Pages.OnboardingPage;
+import Pages.TermsOfUsePage;
+import Pages.EmailPage;
+import Pages.VerifyEmailPage;
+import Pages.CreatePasswordPage;
 import Tests.AbstractBaseTests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -29,6 +33,10 @@ public class LoginTest extends TestBase {
     private LoginPage loginPage;
     private CreateAccountPage createAccountPage;
     private OnboardingPage onboardingPage;
+    private TermsOfUsePage termsOfUsePage;
+    private EmailPage emailPage;
+    private VerifyEmailPage verifyEmailPage;
+    private CreatePasswordPage createPasswordPage;
 
     @Override
     public String getName() {
@@ -63,16 +71,85 @@ public class LoginTest extends TestBase {
     public void selectButton() throws InterruptedException {
         createAccountPage = new CreateAccountPage(driver);
         Thread.sleep(3000);
-        createAccountPage.SelectUpdateAlertCloseButton();
-        Thread.sleep(3000);
+        // createAccountPage.SelectUpdateAlertCloseButton();
+        // Thread.sleep(3000);
         createAccountPage.SelectCreateAmyGovID();
     }
 
     @Then("I should see onboarding screen")
     public void verifyOnboarding() {
         onboardingPage = new OnboardingPage(driver);
-        //onboardingPage.verticalSwipeByPercentages(0.8, 0.2, 0.5);
-        //Assert.assertEquals("Login securely", onboardingPage.getMessage());
+        Assert.assertEquals("Login securely", onboardingPage.getMessage());
     }
 
+    @When("I select Start now")
+    public void selectStartNow() {
+        onboardingPage.SelectStartNowButton();
+        Assert.assertEquals("", "");
+    }
+
+    @Then("I should see Terms of use screen")
+    public void verifyTermsOfUse() {
+        termsOfUsePage = new TermsOfUsePage(driver);
+        Assert.assertEquals("", "");
+    }
+
+    @When("I select Accept")
+    public void selectAccept() throws InterruptedException {
+        termsOfUsePage.SelectAcceptTermsOfUseButton();
+        Thread.sleep(500);
+        Assert.assertEquals("", "");
+    }
+
+    @Then("I should see the Email address screen")
+    public void verifySpecifyEmailScreen() {
+        emailPage = new EmailPage(driver);
+        Assert.assertEquals("Email address", emailPage.getMessage());
+    }
+
+    @When("I enter email address as \"tim@test.com\"")
+    public void enterEmailAddress() throws InterruptedException {
+        emailPage.EnterEmailAddress();
+        Thread.sleep(1000);
+    }
+
+    @When("I select Get code")
+    public void selectGetCodeButton() {
+        emailPage.SelectGetCodeButton();
+    }
+
+    @Then("I should see Verify your email screen")
+    public void verifyEmailScreen() {
+        verifyEmailPage = new VerifyEmailPage(driver);
+        Assert.assertEquals("Verify your email", verifyEmailPage.getMessage());
+    }
+
+    @When("I enter verification code as 111111")
+    public void enterVerificationCode() throws InterruptedException {
+        verifyEmailPage.EnterVerificationCode();
+        Thread.sleep(1000);
+    }
+
+    @When("I select Next")
+    public void selectNextButton() throws InterruptedException {
+        verifyEmailPage.SelectNextButton();
+        Thread.sleep(1000);
+    }
+
+    @Then("I should see Create a password screen")
+    public void verifyPasswordScreen() {
+        createPasswordPage = new CreatePasswordPage(driver);
+        Assert.assertEquals("Create a password", createPasswordPage.getMessage());
+    }
+
+    @When("I enter Password as Password!1")
+    public void enterPassword(){
+        createPasswordPage.EnterPassword();
+    }
+
+    @When("I enter Confirm password as Password!1")
+    public void enterConfirmPassword() throws InterruptedException {
+        createPasswordPage.EnterConfirmPassword();
+        Thread.sleep(2000);
+    }
 }
