@@ -16,6 +16,9 @@ public class LoginPage extends BasePage {
     @AndroidFindBy(id = "continueButton")
     private MobileElement continueButton;
 
+    @AndroidFindBy(id = "testCaseET")
+    private MobileElement testCaseET;
+
     /**
      * The user name input
      */
@@ -26,12 +29,17 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    public boolean login(String username, String password) throws InterruptedException {
-        fastForwardButton.click();
+    public boolean Continue() throws InterruptedException {
         continueButton.click();
         Thread.sleep(KEYBOARD_ANIMATION_DELAY);
 
         return true;
+    }
+
+    public void Select(String testcase) {
+        testCaseET.click();
+        testCaseET.clear();
+        testCaseET.sendKeys(testcase);
     }
 
     /**

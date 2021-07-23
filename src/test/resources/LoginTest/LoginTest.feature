@@ -1,9 +1,27 @@
-Feature: Does the login page work?
-    We want the login page to work when the login credentials are valid, and fail otherwise
+Feature: This test verifies user registration
+    We want the user registration to work
 
-    Background: A Login Page
-        Given I navigate to the login page
-
-    Scenario: Login succeeds
-        Given username is correct
-        Then log out
+    Scenario: User successfully registrates
+        Given I am on the mock screen
+        And Selected TestCase000001
+        When I select Continue
+        Then I see Create a myGovID screen
+        When I select Create a myGovID
+        Then I should see onboarding screen
+        # When I select "Start now"
+        # Then I should see "Terms of use" screen
+        # When I select "Accept"
+        # Then I should see the "Email address" screen
+        # When I enter email address as "tim@test.com"
+        # And I select "Get code"
+        # Then I should see "Verify your email" screen
+        # When I enter verification code "111111"
+        # And I select "Next"
+        # Then I should see "Create a password" screen
+        # When I enter Password as "Password!1"
+        # And I enter Confirm password as "Password!1"
+        # And I select "Next"
+        # Then I should see "Personal details" screen
+        # When I fill personal details with "Tim", "Mardon", "01/01/1990"
+        # And I select "Done"
+        # Then I should see dashboard with identity strength as "Standard"
