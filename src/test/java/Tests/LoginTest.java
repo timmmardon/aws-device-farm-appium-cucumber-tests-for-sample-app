@@ -76,19 +76,21 @@ public class LoginTest extends TestBase {
     public void selectButton() throws InterruptedException {
         createAccountPage = new CreateAccountPage(driver);
         Thread.sleep(3000);
-        // createAccountPage.SelectUpdateAlertCloseButton();
-        // Thread.sleep(3000);
+        createAccountPage.SelectUpdateAlertCloseButton();
+        Thread.sleep(3000);
         createAccountPage.SelectCreateAmyGovID();
     }
 
     @Then("I should see onboarding screen")
     public void verifyOnboarding() {
         onboardingPage = new OnboardingPage(driver);
-        Assert.assertEquals("Login securely", onboardingPage.getMessage());
+        Assert.assertEquals("What is myGovID?", onboardingPage.getMessage());
     }
 
     @When("I select Start now")
-    public void selectStartNow() {
+    public void selectStartNow() throws InterruptedException {
+        onboardingPage.SelectOnboardingSlider();
+        Thread.sleep(1000);
         onboardingPage.SelectStartNowButton();
         Assert.assertEquals("", "");
     }

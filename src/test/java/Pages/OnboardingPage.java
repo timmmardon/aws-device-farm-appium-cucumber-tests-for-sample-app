@@ -11,14 +11,14 @@ public class OnboardingPage extends BasePage {
         super(driver);
     }
 
-    // @AndroidBy(xpath = "//androidx.appcompat.app.ActionBar.Tab[@content-desc='Page 4 of 4']")
-    // private MobileElement onboardingSlider;
+    @AndroidFindBy(xpath = "//android.widget.LinearLayout[@content-desc='Page 4 of 4']")
+    private MobileElement onboardingSlider;
 
-    // MobileElement onboardingSlider = MobileElement driver.findElementsByAccessibilityId("Page 4 of 4");
+    //MobileElement onboardingSlider = MobileElement driver.findElementsByAccessibilityId("Page 4 of 4");
 
-    // public void SelectOnboardingSlider() {
-    //     onboardingSlider.click();
-    // }
+    public void SelectOnboardingSlider() {
+        onboardingSlider.click();
+    }
 
     @AndroidFindBy(id = "nextButton")
     private MobileElement startNowButton;
