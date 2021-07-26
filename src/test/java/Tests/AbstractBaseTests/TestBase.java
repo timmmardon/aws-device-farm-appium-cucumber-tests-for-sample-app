@@ -20,6 +20,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 import Pages.NavigationPage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 
@@ -34,10 +36,12 @@ import java.util.concurrent.TimeUnit;
  */
 public abstract class TestBase extends AbstractTestNGCucumberTests {
     /**
-     * Make the driver static. This allows it to be created only once
+     * Make the AndroidDriver static. This allows it to be created only once
      * and used across all of the test classes.
      */
-    public static AndroidDriver<MobileElement> driver;
+    //public static AndroidDriver<MobileElement> AndroidDriver;
+    public static IOSDriver<MobileElement> driver;
+
 
     /**
      * This allows the navigation to work within the app.
@@ -82,16 +86,33 @@ public abstract class TestBase extends AbstractTestNGCucumberTests {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         //Set the DesiredCapabilities capabilities only for local development
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("platformVersion", "11.0");
-        capabilities.setCapability("deviceName", "emulator-5554");
-        capabilities.setCapability("appPackage", "au.gov.ato.mygovid.droid.integration");
-        capabilities.setCapability("appActivity", "au.gov.ato.myGovID.LaunchActivity");
-        capabilities.setCapability("automationName", "UIAutomator2");
+
+        //Android
+        // capabilities.setCapability("platformName", "Android");
+        // capabilities.setCapability("platformVersion", "11.0");
+        // capabilities.setCapability("deviceName", "emulator-5554");
+        // capabilities.setCapability("appPackage", "au.gov.ato.mygovid.droid.integration");
+        // capabilities.setCapability("appActivity", "au.gov.ato.myGovID.LaunchActivity");
+        // capabilities.setCapability("automationName", "UIAutomator2");
+        // capabilities.setCapability("noReset", "false");
+        // capabilities.setCapability("fullReset", "false");
+
+        // driver = new AndroidDriver<MobileElement>(url, capabilities);
+
+        //Use a higher value if your mobile elements take time to show up
+        //AndroidDriver.manage().timeouts().implicitlyWait(35, TimeUnit.SECONDS);
+
+        //iOS
+        capabilities.setCapability("deviceName", "iPhone 12");
+        capabilities.setCapability("platformVersion", "14.3");
+        capabilities.setCapability("platformName", "iOS");
+        capabilities.setCapability("automationName", "XCUITest");
+        capabilities.setCapability("bundleId", "au.gov.ato.mygovid.ios.integration");
         capabilities.setCapability("noReset", "false");
         capabilities.setCapability("fullReset", "false");
 
-        driver = new AndroidDriver<MobileElement>(url, capabilities);
+
+        driver = new IOSDriver<MobileElement>(url, capabilities);
 
         //Use a higher value if your mobile elements take time to show up
         driver.manage().timeouts().implicitlyWait(35, TimeUnit.SECONDS);

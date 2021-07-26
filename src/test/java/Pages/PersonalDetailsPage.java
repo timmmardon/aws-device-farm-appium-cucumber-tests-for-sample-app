@@ -3,6 +3,7 @@ package Pages;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.iOSFindBy;
 
 
 public class PersonalDetailsPage extends BasePage {
@@ -11,20 +12,31 @@ public class PersonalDetailsPage extends BasePage {
         super(driver);
     }
 
+    @iOSFindBy(accessibility = "mygovid.registration.personaldetails.givennames.value")
     @AndroidFindBy(id = "givenNameET")
     private MobileElement givenNameET;
 
+    @iOSFindBy(accessibility = "mygovid.registration.personaldetails.familyname.value")
     @AndroidFindBy(id = "familyNameET")
     private MobileElement familyNameET;
 
+    @iOSFindBy(accessibility = "mygovid.registration.personaldetails.dateofbirth.value")
     @AndroidFindBy(id = "dateOfBirthET")
     private MobileElement dateOfBirthET;
 
+    @iOSFindBy(accessibility = "mygovid.registration.personaldetails.done")
     @AndroidFindBy(id = "nextButton")
     private MobileElement nextButton;
 
+    @iOSFindBy(accessibility = "Done")
+    private MobileElement personalDetailsKeyboardDoneButton;
+
+    @iOSFindBy(accessibility = "mygovid.registration.personaldetails.heading")
+    @AndroidFindBy(id = "personalDetailsHeadingLabel")
+    private MobileElement personalDetailsHeadingLabel;
+
     public String getMessage() {
-        return driver.findElementById("personalDetailsHeadingLabel").getText();
+        return personalDetailsHeadingLabel.getText();
     }
 
     public void EnterGivenName() {
@@ -36,10 +48,16 @@ public class PersonalDetailsPage extends BasePage {
     }
 
     public void EnterDOB() {
-        dateOfBirthET.sendKeys("01/01/1990");
+        dateOfBirthET.click();
+        dateOfBirthET.clear();
+        dateOfBirthET.setValue("01/01/1990");
     }
 
     public void SelectDoneButton() {
         nextButton.click();
+    }
+
+    public void SelectKeyboardDoneButton() {
+        personalDetailsKeyboardDoneButton.click();
     }
 }

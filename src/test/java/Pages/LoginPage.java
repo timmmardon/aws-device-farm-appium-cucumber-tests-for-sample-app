@@ -3,6 +3,8 @@ package Pages;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.Keys;
 
 /**
  * A login page
@@ -13,11 +15,17 @@ public class LoginPage extends BasePage {
     /**
      * The login button
      */
+
+    @iOSFindBy(accessibility = "mygovid.mock.continue")
     @AndroidFindBy(id = "continueButton")
     private MobileElement continueButton;
 
+    @iOSFindBy(accessibility = "mygovid.mock.testcasetextfield")
     @AndroidFindBy(id = "testCaseET")
     private MobileElement testCaseET;
+
+    @iOSFindBy(accessibility = "Done")
+    private MobileElement keyboardDoneButton;
 
     /**
      * The user name input
@@ -36,11 +44,13 @@ public class LoginPage extends BasePage {
         return true;
     }
 
-    public void Select(String testcase) {
-        testCaseET.click();
+    public void Select(String testcase) throws InterruptedException {
+        //testCaseET.click();
         testCaseET.clear();
         testCaseET.sendKeys(testcase);
+        keyboardDoneButton.click();
     }
+
 
     /**
      *
