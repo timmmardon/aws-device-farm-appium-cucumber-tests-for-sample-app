@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.Keys;
 
 
 public class EmailPage extends BasePage {
@@ -42,5 +43,6 @@ public class EmailPage extends BasePage {
 
     public void EnterEmailAddress() {
         emailAddressET.sendKeys("tim@test.com");
+        emailAddressET.sendKeys(Keys.ENTER);
     }
 }

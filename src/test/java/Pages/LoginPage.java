@@ -48,7 +48,11 @@ public class LoginPage extends BasePage {
         //testCaseET.click();
         testCaseET.clear();
         testCaseET.sendKeys(testcase);
-        keyboardDoneButton.click();
+        Thread.sleep(1000);
+        testCaseET.sendKeys(Keys.ENTER);
+        //driver.hideKeyboard();
+        //keyboardDoneButton.click();
+        Thread.sleep(1000);
     }
 
 

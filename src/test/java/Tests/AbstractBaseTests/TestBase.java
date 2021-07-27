@@ -110,6 +110,7 @@ public abstract class TestBase extends AbstractTestNGCucumberTests {
         capabilities.setCapability("bundleId", "au.gov.ato.mygovid.ios.integration");
         capabilities.setCapability("noReset", "false");
         capabilities.setCapability("fullReset", "false");
+        // capabilities.setCapability("autoAcceptAlerts", true);
 
 
         driver = new IOSDriver<MobileElement>(url, capabilities);

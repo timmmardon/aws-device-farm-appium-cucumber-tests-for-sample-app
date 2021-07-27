@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.Keys;
 
 
 public class VerifyEmailPage extends BasePage {
@@ -31,8 +32,11 @@ public class VerifyEmailPage extends BasePage {
         return emailVerificationHeading.getText();
     }
 
-    public void EnterVerificationCode() {
+    public void EnterVerificationCode() throws InterruptedException {
         verificationCodeInput.sendKeys("111111");
+        Thread.sleep(1000);
+        // verificationCodeInput.sendKeys(Keys.ENTER);
+        // Thread.sleep(1000);
     }
 
     public void SelectVerifyEmailNextButton() {

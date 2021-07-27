@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.Keys;
 
 
 public class PersonalDetailsPage extends BasePage {
@@ -41,16 +42,19 @@ public class PersonalDetailsPage extends BasePage {
 
     public void EnterGivenName() {
         givenNameET.sendKeys("Tim");
+        givenNameET.sendKeys(Keys.ENTER);
     }
 
     public void EnterFamilyName() {
         familyNameET.sendKeys("Mardon");
+        familyNameET.sendKeys(Keys.ENTER);
     }
 
     public void EnterDOB() {
         dateOfBirthET.click();
         dateOfBirthET.clear();
         dateOfBirthET.setValue("01/01/1990");
+        dateOfBirthET.sendKeys(Keys.ENTER);
     }
 
     public void SelectDoneButton() {

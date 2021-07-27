@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.Keys;
 
 
 public class CreateAccountPage extends BasePage {
@@ -19,6 +20,10 @@ public class CreateAccountPage extends BasePage {
     @iOSFindBy(accessibility = "Not now")
     @AndroidFindBy(id = "closeButton")
     private MobileElement updateAlertCloseButton;
+
+    @iOSFindBy(accessibility = "Allow")
+    //@AndroidFindBy(id = "TBC")
+    private MobileElement notificationAlertAllowButton;
 
     @iOSFindBy(accessibility = "mygovid.registration.existingmygovid")
     //@AndroidFindBy(id = "closeButton")
@@ -40,7 +45,9 @@ public class CreateAccountPage extends BasePage {
         existingUserButton.click();
     }
 
-    public void SelectUpdateAlertCloseButton() {
+    public void SelectUpdateAlertCloseButton() throws InterruptedException {
+        notificationAlertAllowButton.click();
+        Thread.sleep(1000);
         updateAlertCloseButton.click();
     }
 

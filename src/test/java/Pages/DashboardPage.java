@@ -15,8 +15,8 @@ public class DashboardPage extends BasePage {
     @AndroidFindBy(id = "identityStrengthTitle")
     private MobileElement identityStrengthTitle;
 
-    public String getMessage() {
-        return identityStrengthTitle.getAttribute("value");
-        return identityStrengthTitle.getText();
-    }
+    // public String getMessage() {
+    //     return identityStrengthTitle.getAttribute("value");
+    //     return identityStrengthTitle.getText();
+    // }
 }

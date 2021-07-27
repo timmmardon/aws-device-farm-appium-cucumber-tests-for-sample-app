@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.Keys;
 
 public class CreatePasswordPage extends BasePage {
 
@@ -44,10 +45,12 @@ public class CreatePasswordPage extends BasePage {
 
     public void EnterPassword() {
         Password.sendKeys("Password!1");
+        Password.sendKeys(Keys.ENTER);
     }
 
     public void EnterConfirmPassword() {
         ConfirmPassword.sendKeys("Password!1");
+        ConfirmPassword.sendKeys(Keys.ENTER);
     }
 
 }
