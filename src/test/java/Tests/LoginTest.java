@@ -72,13 +72,24 @@ public class LoginTest extends TestBase {
         Assert.assertEquals("", "");
     }
 
-    @Then("I select Create a myGovID")
-    public void selectButton() throws InterruptedException {
+    // @Then("I select Create a myGovID")
+    // public void selectButton() throws InterruptedException {
+    //     createAccountPage = new CreateAccountPage(driver);
+    //     Thread.sleep(3000);
+    //     createAccountPage.SelectUpdateAlertCloseButton();
+    //     Thread.sleep(3000);
+    //     createAccountPage.SelectCreateAmyGovID();
+    // }
+
+    @Then("I select I am an existing user")
+    public void selectExistingUserButton() throws InterruptedException {
         createAccountPage = new CreateAccountPage(driver);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         createAccountPage.SelectUpdateAlertCloseButton();
-        Thread.sleep(3000);
-        createAccountPage.SelectCreateAmyGovID();
+        Thread.sleep(2000);
+        createAccountPage.SelectExistingUserButton();
+        Thread.sleep(2000);
+        createAccountPage.SelectAlertNextButton();
     }
 
     @Then("I should see onboarding screen")

@@ -20,8 +20,24 @@ public class CreateAccountPage extends BasePage {
     @AndroidFindBy(id = "closeButton")
     private MobileElement updateAlertCloseButton;
 
+    @iOSFindBy(accessibility = "mygovid.registration.existingmygovid")
+    //@AndroidFindBy(id = "closeButton")
+    private MobileElement existingUserButton;
+
+    @iOSFindBy(accessibility = "mygovid.alert.continue")
+    @AndroidFindBy(id = "nextButton")
+    private MobileElement alertNextButton;
+
     public void SelectCreateAmyGovID() {
         createMyGovIDButton.click();
+    }
+
+    public void SelectAlertNextButton() {
+        alertNextButton.click();
+    }
+
+    public void SelectExistingUserButton() {
+        existingUserButton.click();
     }
 
     public void SelectUpdateAlertCloseButton() {

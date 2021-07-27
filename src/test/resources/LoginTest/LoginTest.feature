@@ -6,9 +6,10 @@ Feature: This test verifies user registration
         And Selected TestCase000001
         When I select Continue
         Then I see Create a myGovID screen
-        When I select Create a myGovID
-        Then I should see onboarding screen
-        When I select Start now
+        # When I select Create a myGovID
+        # Then I should see onboarding screen
+        # When I select Start now
+        When I select I am an existing user
         Then I should see Terms of use screen
         When I select Accept
         Then I should see the Email address screen

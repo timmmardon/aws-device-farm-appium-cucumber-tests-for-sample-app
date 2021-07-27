@@ -17,5 +17,6 @@ public class DashboardPage extends BasePage {
 
     public String getMessage() {
         return identityStrengthTitle.getAttribute("value");
+        return identityStrengthTitle.getText();
     }
 }
